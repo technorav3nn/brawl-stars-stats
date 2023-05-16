@@ -2054,17 +2054,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/carousel@npm:6.0.2":
-  version: 6.0.2
-  resolution: "@mantine/carousel@npm:6.0.2"
+"@mantine/carousel@npm:^6.0.11":
+  version: 6.0.11
+  resolution: "@mantine/carousel@npm:6.0.11"
   dependencies:
-    "@mantine/utils": "npm:6.0.2"
+    "@mantine/utils": "npm:6.0.11"
   peerDependencies:
-    "@mantine/core": 6.0.2
-    "@mantine/hooks": 6.0.2
+    "@mantine/core": 6.0.11
+    "@mantine/hooks": 6.0.11
     embla-carousel-react: ^7.0.0
     react: ">=16.8.0"
-  checksum: 4b0f8d67e539c4d5a6e8eaa76879fafa4e10c4e4065ed718aee56c6fd30c2b21f7f1a8a79f2153f42b38c5a7d1f5eb7f4f50e43c80da03d2d1a2db3d39daf4c6
+  checksum: b853fa6808127b57c7bb4afaa9d366751b8bdff1d978b9db05aa70c73406af28aac65f20eb6abebf44de302630c21bf4cd2516312c09164da62ca3ed03bf63bc
   languageName: node
   linkType: hard
 
@@ -2240,6 +2240,15 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 9d335af2980320de8003323b990df642d54cd5cf27eccd2b6da0ded3b6bb8f1eceee4ee7aec8e6eb75d88056b2bd0223e16c14ef258214090a3a14142e738c7d
+  languageName: node
+  linkType: hard
+
+"@mantine/utils@npm:6.0.11":
+  version: 6.0.11
+  resolution: "@mantine/utils@npm:6.0.11"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 730f302b41a3704a0b69787a939a4019bf2ae572b0ef16e2cb3110dce4d25373015f510696964892c4caf8beaf38b59e0574af57376ee692c651135cc69ebea4
   languageName: node
   linkType: hard
 
@@ -7077,7 +7086,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"embla-carousel-react@npm:^7.0.3":
+"embla-carousel-react@npm:^7.1.0":
   version: 7.1.0
   resolution: "embla-carousel-react@npm:7.1.0"
   dependencies:
@@ -7085,6 +7094,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.1 || ^18.0.0
   checksum: c5d2c8519d7cf5bad75883fb188fc3ad3356a81c44bd738e8413c54b2420c09d5a1831ab3ab6b4b199872cbfd8c11a112cd8c4fd7429891ccffa00639763fd47
+  languageName: node
+  linkType: hard
+
+"embla-carousel-wheel-gestures@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "embla-carousel-wheel-gestures@npm:3.0.0"
+  dependencies:
+    wheel-gestures: "npm:^2.2.5"
+  peerDependencies:
+    embla-carousel: ^7.0.0
+  checksum: 74d492ce9b0747ae79f9750d3e79f39af73e4a435d311ef3f47b2d97fca66122c827d2ec965efc9ffe49acb90405ffcfbf26a9039bbd8e62db4d6c83f2ea9614
   languageName: node
   linkType: hard
 
@@ -15538,7 +15558,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.10.4"
     "@emotion/server": "npm:^11.10.0"
-    "@mantine/carousel": "npm:6.0.2"
+    "@mantine/carousel": "npm:^6.0.11"
     "@mantine/core": "npm:6.0.2"
     "@mantine/dates": "npm:6.0.2"
     "@mantine/decorations": "npm:^3.1.9"
@@ -15558,7 +15578,8 @@ __metadata:
     brawl-api: "npm:^1.2.4"
     cookies-next: "npm:^2.1.1"
     dayjs: "npm:^1.11.6"
-    embla-carousel-react: "npm:^7.0.3"
+    embla-carousel-react: "npm:^7.1.0"
+    embla-carousel-wheel-gestures: "npm:^3.0.0"
     md5: "npm:^2.3.0"
     next: "npm:13.4.0"
     node-brawlstars: "npm:^4.0.3"
@@ -15784,6 +15805,13 @@ __metadata:
     tr46: "npm:~0.0.3"
     webidl-conversions: "npm:^3.0.0"
   checksum: bd0cc6b75b84b3d032e30712e2f40eefbc07ecd14f093e87b2f81bb68bce10a3961e8eb646a7a8cc9c2352548fb501eeff668c8b2595fd7c6ea91d1406ce11ee
+  languageName: node
+  linkType: hard
+
+"wheel-gestures@npm:^2.2.5":
+  version: 2.2.45
+  resolution: "wheel-gestures@npm:2.2.45"
+  checksum: 1ef770b66aaf6dea1b010469ba6be80ab9bc5036720aedd7fd35f9686a3a2a8fa264a32ac15970dea20c816f62cc2e6c8601ae94cdd6dc8e803d6f63aa266197
   languageName: node
   linkType: hard
 

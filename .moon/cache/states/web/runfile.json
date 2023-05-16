@@ -50,15 +50,6 @@
       ],
       "id": "configs"
     },
-    "tests": {
-      "files": [],
-      "globs": [
-        "apps/web/tests/**/*.test.*",
-        "apps/web/tests/**/*.stories.*",
-        "apps/web/**/__tests__/**/*"
-      ],
-      "id": "tests"
-    },
     "sources": {
       "files": [],
       "globs": [
@@ -67,6 +58,15 @@
         "apps/web/types/**/*"
       ],
       "id": "sources"
+    },
+    "tests": {
+      "files": [],
+      "globs": [
+        "apps/web/tests/**/*.test.*",
+        "apps/web/tests/**/*.stories.*",
+        "apps/web/**/__tests__/**/*"
+      ],
+      "id": "tests"
     },
     "app": {
       "files": [
@@ -96,15 +96,15 @@
       "configs": [
         "*.{js,json,yml,yaml}"
       ],
-      "sources": [
-        "public/**/*",
-        "src/**/*",
-        "types/**/*"
-      ],
       "tests": [
         "tests/**/*.test.*",
         "tests/**/*.stories.*",
         "**/__tests__/**/*"
+      ],
+      "sources": [
+        "public/**/*",
+        "src/**/*",
+        "types/**/*"
       ],
       "app": [],
       "assets": [
@@ -221,11 +221,11 @@
         "package.json"
       ],
       "inputGlobs": [
-        ".moon/*.yml",
+        "apps/web/types/**/*",
         "apps/web/public/**/*",
         "apps/web/next.config.*",
-        "apps/web/src/**/*",
-        "apps/web/types/**/*"
+        ".moon/*.yml",
+        "apps/web/src/**/*"
       ],
       "inputPaths": [
         "apps/web/next-env.d.ts",
@@ -324,11 +324,11 @@
         "package.json"
       ],
       "inputGlobs": [
-        ".moon/*.yml",
+        "apps/web/types/**/*",
         "apps/web/public/**/*",
         "apps/web/next.config.*",
-        "apps/web/src/**/*",
-        "apps/web/types/**/*"
+        ".moon/*.yml",
+        "apps/web/src/**/*"
       ],
       "inputPaths": [
         "apps/web/next-env.d.ts",
@@ -392,16 +392,16 @@
         "package.json"
       ],
       "inputGlobs": [
-        "apps/web/tests/**/*.stories.*",
-        "apps/web/**/*.{md,mdx}",
-        "apps/web/public/**/*",
-        "apps/web/tests/**/*.test.*",
-        ".moon/*.yml",
-        "apps/web/**/__tests__/**/*",
-        "apps/web/*.{js,json,yml,yaml}",
-        "apps/web/next.config.*",
         "apps/web/src/**/*",
-        "apps/web/types/**/*"
+        "apps/web/types/**/*",
+        "apps/web/public/**/*",
+        ".moon/*.yml",
+        "apps/web/tests/**/*.test.*",
+        "apps/web/*.{js,json,yml,yaml}",
+        "apps/web/**/*.{md,mdx}",
+        "apps/web/**/__tests__/**/*",
+        "apps/web/tests/**/*.stories.*",
+        "apps/web/next.config.*"
       ],
       "inputPaths": [
         ".moon/tasks/node.yml",
@@ -470,26 +470,26 @@
         "package.json"
       ],
       "inputGlobs": [
-        "apps/web/next.config.*",
-        "apps/web/types/**/*",
+        ".eslintrc.*",
+        "apps/web/**/.eslintrc.*",
         "apps/web/*.config.*",
         "apps/web/public/**/*",
-        "apps/web/tests/**/*.stories.*",
+        "apps/web/src/**/*",
         "apps/web/tests/**/*.test.*",
         ".moon/*.yml",
         "apps/web/**/__tests__/**/*",
-        ".eslintrc.*",
-        "apps/web/**/.eslintrc.*",
-        "apps/web/src/**/*"
+        "apps/web/next.config.*",
+        "apps/web/types/**/*",
+        "apps/web/tests/**/*.stories.*"
       ],
       "inputPaths": [
-        "apps/web/next-env.d.ts",
+        "tsconfig.options.json",
         ".moon/tasks/node.yml",
         "apps/web/package.json",
         "apps/web/tsconfig.json",
         "tsconfig.eslint.json",
-        ".eslintignore",
-        "tsconfig.options.json"
+        "apps/web/next-env.d.ts",
+        ".eslintignore"
       ],
       "inputVars": [],
       "options": {
@@ -585,8 +585,8 @@
       ],
       "inputGlobs": [
         "apps/web/public/**/*",
-        "apps/web/tests/**/*.test.*",
         ".moon/*.yml",
+        "apps/web/tests/**/*.test.*",
         "apps/web/jest.config.*",
         "apps/web/**/__tests__/**/*",
         "apps/web/types/**/*",
@@ -645,15 +645,15 @@
         "package.json"
       ],
       "inputGlobs": [
-        "apps/web/tests/**/*.stories.*",
-        "apps/web/tsconfig.*.json",
+        "apps/web/src/**/*",
+        "apps/web/types/**/*",
         "apps/web/public/**/*",
         "apps/web/tests/**/*.test.*",
         ".moon/*.yml",
         "apps/web/**/__tests__/**/*",
         "apps/web/next.config.*",
-        "apps/web/src/**/*",
-        "apps/web/types/**/*"
+        "apps/web/tests/**/*.stories.*",
+        "apps/web/tsconfig.*.json"
       ],
       "inputPaths": [
         ".moon/tasks/node.yml",

@@ -81,6 +81,11 @@ export default function AllBrawlers({ brawlers }: { brawlers: BrawlerWithLess[] 
                     { maxWidth: 400, cols: 3 },
                     { maxWidth: "sm", cols: 4 },
                     { maxWidth: "md", cols: 6 },
+                    { maxWidth: "lg", cols: 8 },
+                    { maxWidth: "xl", cols: 9 },
+                    { minWidth: "2xl", cols: 10 },
+                    { maxWidth: "lg", cols: 8 },
+                    { maxWidth: "xl", cols: 9 },
                 ]}
                 mb="lg"
             >

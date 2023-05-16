@@ -14,7 +14,7 @@
     "dependencies": {
         "@emotion/react": "^11.10.4",
         "@emotion/server": "^11.10.0",
-        "@mantine/carousel": "6.0.2",
+        "@mantine/carousel": "^6.0.11",
         "@mantine/core": "6.0.2",
         "@mantine/dates": "6.0.2",
         "@mantine/decorations": "^3.1.9",
@@ -34,7 +34,8 @@
         "brawl-api": "^1.2.4",
         "cookies-next": "^2.1.1",
         "dayjs": "^1.11.6",
-        "embla-carousel-react": "^7.0.3",
+        "embla-carousel-react": "^7.1.0",
+        "embla-carousel-wheel-gestures": "^3.0.0",
         "md5": "^2.3.0",
         "next": "13.4.0",
         "node-brawlstars": "^4.0.3",

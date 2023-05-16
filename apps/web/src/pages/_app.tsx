@@ -8,8 +8,14 @@ import { Header } from "../components/Layout/Header";
 import { RouterProgress } from "../components/Layout/RouterProgress/RouterProgress";
 import "../styles/global.css";
 
-export default function App(props: AppProps & { colorScheme: ColorScheme }) {
+// define Component as a Next.js component with a layout prop
+type AppPropsWithLayout = AppProps & {
+    Component: { layout?: React.ComponentType<{ children: React.ReactNode }> };
+};
+
+export default function App(props: AppPropsWithLayout & { colorScheme: ColorScheme }) {
     const { Component, pageProps } = props;
+    const Layout = Component.layout || ((children) => <>{children}</>);
 
     const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
 
@@ -45,7 +51,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
                     <Notifications />
                     <RouterProgress />
                     <Header />
-                    <Component {...pageProps} />
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
                 </MantineProvider>
             </ColorSchemeProvider>
         </>

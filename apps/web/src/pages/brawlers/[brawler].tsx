@@ -1,10 +1,23 @@
-import { useRouter } from "next/router";
 import { Time } from "@sapphire/time-utilities";
 import { Brawler } from "brawl-api";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
-import { brawlifyApi } from "../../lib/apis";
-import { Anchor, Breadcrumbs, Container } from "@mantine/core";
+import {
+    Anchor,
+    Box,
+    Breadcrumbs,
+    Container,
+    Grid,
+    Group,
+    ScrollArea,
+    SimpleGrid,
+    Space,
+    getSize,
+} from "@mantine/core";
 import Link from "next/link";
+import { useRef } from "react";
+import { BrawlerTitleSection } from "../../components/Brawlers/Brawler/BrawlerTitleSection";
+import { brawlifyApi } from "../../lib/apis";
+import { BrawlerInfoCard } from "../../components/Brawlers/Brawler/BrawlerInfoCarousel/BrawlerInfoCard";
 
 const ONE_HOUR = Time.Hour;
 
@@ -34,9 +47,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Brawler({ brawler }: { brawler: Brawler }) {
-    const router = useRouter();
-    const { brawler: brawlerId } = router.query as { brawler: string };
-
     const breadcrumbItems = [
         {
             name: "Brawlers",
@@ -55,9 +65,61 @@ export default function Brawler({ brawler }: { brawler: Brawler }) {
     return (
         <Container size="lg">
             <Breadcrumbs>{breadcrumbItems}</Breadcrumbs>
-            <h1>
-                {brawlerId}, {brawler.name}
-            </h1>
+            <Space h={30} />
+            <BrawlerTitleSection brawler={brawler} />
+            <Space h={30} />
+            {/**
+             * Make a horizontal scroll area that houses the cards
+             * that display the brawler's stats
+             *
+             */}
+            <div>
+                <Box
+                    sx={(theme) => ({
+                        display: "grid",
+                        gridTemplateColumns: "none",
+                        gridAutoFlow: "column dense",
+                        gridAutoColumns: "minmax(10px, min-content)",
+                        overflowX: "auto",
+                        [theme.fn.smallerThan("md")]: {
+                            gap: 320,
+                        },
+                        [theme.fn.largerThan("md")]: {
+                            gap: 200,
+                        },
+                        // hide scrollbar
+                        scrollbarWidth: "none",
+                        "&::-webkit-scrollbar": {
+                            display: "none",
+                        },
+                        scrollSnapType: "x proximity",
+                    })}
+                >
+                    <BrawlerInfoCard title="Ass" description="Ass" />
+                    <BrawlerInfoCard title="Ass" description="Ass" />
+                    <BrawlerInfoCard title="Ass" description="Ass" />
+                    <BrawlerInfoCard title="Ass" description="Ass" />
+                </Box>
+            </div>
+
+            {/* <ScrollArea h={350}>
+                <div style={{ width: 1250 }}>
+                    <Grid
+                        sx={{
+                            "& > *": {
+                                marginLeft: 20,
+                                marginTop: 20,
+                            },
+                        }}
+                    >
+                        <BrawlerInfoCard title="Attack" description="Ass" />
+                        <BrawlerInfoCard title="Super" description="Ass" />
+                        <BrawlerInfoCard title="Gadgets" description="Ass" />
+                        <BrawlerInfoCard title="Star Powers" description="Ass" />
+                        <BrawlerInfoCard title="Gears" description="Ass" />
+                    </Grid>
+                </div>
+            </ScrollArea> */}
         </Container>
     );
 }
