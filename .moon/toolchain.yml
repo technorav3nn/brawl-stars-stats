@@ -1,0 +1,24 @@
+$schema: "https://moonrepo.dev/schemas/toolchain.json"
+
+node:
+    version: "18.12.0"
+    packageManager: "yarn"
+    yarn:
+        version: "4.0.0-rc.43"
+        # plugins:
+    addEnginesConstraint: true
+    dedupeOnLockfileChange: true
+    dependencyVersionFormat: "workspace"
+    syncProjectWorkspaceDependencies: true
+
+typescript:
+    projectConfigFileName: "tsconfig.json"
+    rootConfigFileName: "tsconfig.json"
+    routeOutDirToCache: true
+    syncProjectReferences: true
+# Enable Rust
+# rust: {}
+
+# # Enable Rust and override default settings
+# rust:
+#     syncToolchainConfig: true

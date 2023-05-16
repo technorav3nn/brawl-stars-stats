@@ -1,0 +1,12 @@
+{
+  "aliases": {},
+  "configs": {
+    ".moon/tasks/node.yml": "8ec35ee3702d6cc626c2454f69004ea8dc26fb3c",
+    ".moon/workspace.yml": "9b2f054ca07ed7d3b48f0f60396a7dd0a7563743"
+  },
+  "sources": {
+    "web": "apps/web"
+  },
+  "inContainer": false,
+  "version": "1.6.0"
+}

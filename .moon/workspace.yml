@@ -1,0 +1,18 @@
+$schema: 'https://moonrepo.dev/schemas/workspace.json'
+
+versionConstraint: '>=1.0.0'
+
+projects:
+  web: 'apps/web'
+
+vcs:
+  manager: 'git'
+  defaultBranch: 'master'
+
+runner:
+  archivableTargets:
+    - ':format'
+    - ':lint'
+    - ':test'
+    - ':typecheck'
+  logRunningCommand: true

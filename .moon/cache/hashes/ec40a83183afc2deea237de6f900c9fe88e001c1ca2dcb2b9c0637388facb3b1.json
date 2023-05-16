@@ -1,0 +1,16 @@
+{
+  "aliases": {
+    "web": "web"
+  },
+  "configs": {
+    ".moon/tasks/node.yml": "9e3d29e0e68936632a23f028f2729d790601f4e9",
+    ".moon/toolchain.yml": "f1c06eaaf862d290b1f908db079117bb02d89eee",
+    ".moon/workspace.yml": "22d5b5d9a983ae878e6115ccda79c98d245e21ce",
+    "apps/web/moon.yml": "528f1fbf2f99d09cd0ec801855c5601ae87f48d1"
+  },
+  "sources": {
+    "web": "apps/web"
+  },
+  "inContainer": false,
+  "version": "1.6.0"
+}

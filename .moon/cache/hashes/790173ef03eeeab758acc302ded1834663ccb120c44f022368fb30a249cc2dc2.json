@@ -1,0 +1,289 @@
+[
+  {
+    "command": "moon",
+    "args": [
+      "dev",
+      "node",
+      "run-script"
+    ],
+    "deps": {},
+    "envVars": {},
+    "inputs": {
+      ".moon/tasks/node.yml": "8ec35ee3702d6cc626c2454f69004ea8dc26fb3c",
+      ".moon/toolchain.yml": "14e48e3c5b34a80c750f5de0c5c26730a0b262fe",
+      ".moon/workspace.yml": "22d5b5d9a983ae878e6115ccda79c98d245e21ce",
+      "apps/web/.eslintignore": "4c43fe68f6405ee8c6c641998a414c8fa66b0aba",
+      "apps/web/.eslintrc.js": "3ec95dd70c1123224e1d096558c88dbecded0278",
+      "apps/web/.gitignore": "de117b9297f0360c1dac9744c958cfe319fb0e23",
+      "apps/web/.prettierrc.js": "461eef59ae686be5cfb5a484eea0c1899222572f",
+      "apps/web/next-env.d.ts": "4f11a03dc6cc37f2b5105c08f2e7b24c603ab2f4",
+      "apps/web/next.config.js": "a82abc07036792e41ff30e35b3383db2607f705f",
+      "apps/web/package.json": "cb1cf31a373a4794c5029ff74417635e8e9f1c16",
+      "apps/web/public/brawl-stars-logo.svg": "651e3988a21426d6d04d4eddfbe80ad594e9052f",
+      "apps/web/public/favicon.svg": "22bab82ea4330dc47433523f394a2c7e81e071cb",
+      "apps/web/src/components/Brawlers/AllBrawlersCard/AllBrawlersCard.styles.ts": "42ca6ef3a0e36253f0d40ab5814f7cc5830266cf",
+      "apps/web/src/components/Brawlers/AllBrawlersCard/AllBrawlersCard.tsx": "2d20218adab337e1d89119ffd22e0d4e285fad04",
+      "apps/web/src/components/Brawlers/AllBrawlersCard/index.ts": "fa6c63a37018f5334a840402b89307181dd2ac48",
+      "apps/web/src/components/Brawlers/AllBrawlersFiltering/AllBrawlersFilter.tsx": "ef815f8f0fcae5e7f30549416cae7e7b38320729",
+      "apps/web/src/components/Icons/BrawlStarsLogo.tsx": "7f4d88db8241b4d9e4d40111fb05a9db095be6e4",
+      "apps/web/src/components/Layout/ColorSchemeToggle/ColorSchemeToggle.tsx": "41b39f4d6a70f481567cb08e3f29d58f676e6b55",
+      "apps/web/src/components/Layout/ColorSchemeToggle/index.ts": "6a2af8c52cca6d93e98e4b5bd4612dc53c1f9fcd",
+      "apps/web/src/components/Layout/Header/Header.tsx": "6fc1abc6240c7c1c91cf034378936ee8c853c163",
+      "apps/web/src/components/Layout/Header/HeaderMobile/HeaderMobile.styles.ts": "2b820fb6cc17a8c87629814c101c7e34443aeda8",
+      "apps/web/src/components/Layout/Header/HeaderMobile/HeaderMobile.tsx": "66da5c3c1b3bf36bb63bf52d57f677bd7d6fee6a",
+      "apps/web/src/components/Layout/Header/HeaderMobile/index.ts": "501dc2d9f71088795eed058fd29895c0c4d039f5",
+      "apps/web/src/components/Layout/Header/Searchbar/Searchbar.styles.ts": "363a2a44844895df1d50238abca5553dc2c2151b",
+      "apps/web/src/components/Layout/Header/Searchbar/Searchbar.tsx": "6f1597a6502e79a418f0c56fd4bb1d036e2a4a4c",
+      "apps/web/src/components/Layout/Header/Searchbar/index.ts": "daa7e6181c0fa0fe7bbcf0aaebda77dcd6c49feb",
+      "apps/web/src/components/Layout/Header/index.ts": "c940126c9a2af11accca881ea6d950580504ca00",
+      "apps/web/src/components/Layout/RouterProgress/RouterProgress.tsx": "b27dbb46d96544b8898bf755429af6f71e7801e7",
+      "apps/web/src/components/Welcome/Welcome.styles.ts": "d1b99469fd3dccfc39b71af12355453391538cca",
+      "apps/web/src/components/Welcome/Welcome.tsx": "a52bb80ec9dbfd806e001c083e9cee56d7110dda",
+      "apps/web/src/hooks/use-server-loading.ts": "87dd9f9d9dceadf4654eba638662d441fdf82454",
+      "apps/web/src/lib/apis.ts": "45b30ebef8bb5597ef6ce379f3286b00edc8655a",
+      "apps/web/src/lib/brawlstats.ts": "81c6d3dabb0e0e301145d4681090b0e1aa5defe4",
+      "apps/web/src/lib/types/augments.d.ts": "20931ef5f980ed414cc187f407b36074704b9c3e",
+      "apps/web/src/lib/types/index.ts": "11024df9bc06608e57f4d2a39ea3aeca43ffc1f3",
+      "apps/web/src/lib/util/extract-unit-value.ts": "92e6176e8ee3b502b373c43cfe9df3fda4cda144",
+      "apps/web/src/lib/util/get-color-name.ts": "a53dea52adc0f89d62bad644f19a5ec814160d17",
+      "apps/web/src/lib/util/resolve-brawler-name.ts": "d0e0f1c8c13b6e758fc393599dd7502b723c0bdc",
+      "apps/web/src/pages/_app.tsx": "d4eee1bcfa5384505d8bf9790856655e7073879e",
+      "apps/web/src/pages/_document.tsx": "1f706f641ff08c8e3295ab184156c0ffe21a38aa",
+      "apps/web/src/pages/brawlers/[brawler].tsx": "d538f344726e96a10a4fb2b73c9b9f68efc3a8e3",
+      "apps/web/src/pages/brawlers/index.tsx": "f7de75e723d9c9cb3971e65033f38187441915ca",
+      "apps/web/src/pages/index.tsx": "83819b432dc593ec3002d5e7082cfd49dca526ea",
+      "apps/web/src/pages/test.tsx": "9c96a95a7e1361feb5665590ae978a94c141e2b3",
+      "apps/web/src/store/all-brawlers-filter-store.ts": "0d61ea094399f6f87147e14b228cc2b0a89d4dee",
+      "apps/web/src/styles/global.css": "be9c9d40b712d8fa9150155ef0a6d2cf3bff43a7",
+      "apps/web/tsconfig.json": "0d1815d2fa5fb394b78337ba1b5e9108f6166c12"
+    },
+    "outputs": [],
+    "projectDeps": [],
+    "target": "web:dev",
+    "version": "1"
+  },
+  {
+    "nodeVersion": "18.12.0",
+    "dependencies": {
+      "@babel/core": [
+        "81e8853407b3a6b0808f7d8f196612f9a510dec1cec0a45a07bc7b0982c24abe848944fe0d8efc6840842e272ef55825537c5870e5a52def9e0111231d020fd8",
+        "a08673ed958cb1b39cd078a47000fb95ad6d0017113f3b96e463149295caf7e0ad5de39751fd17fcc750ee1007f397fb7abf8a8df76d2ea2dc70abf1d4dedd31"
+      ],
+      "@emotion/react": [
+        "090797964325e85d00dc44f109efc7c93194049128ebffde55819f0f37b201608d2a8090d11c1173af09621eceb011ea9d9b1c37d54b3508fe8b144f53db3f28"
+      ],
+      "@emotion/server": [
+        "333bf90a901d2cc4442c12b0d3539c2885324e452cd1d74b27148ebb518aa44f45e50e1a9eabf04a0255aee8919888a3b3effd866dc25ea7a106ead0903d3393"
+      ],
+      "@mantine/carousel": [
+        "4b0f8d67e539c4d5a6e8eaa76879fafa4e10c4e4065ed718aee56c6fd30c2b21f7f1a8a79f2153f42b38c5a7d1f5eb7f4f50e43c80da03d2d1a2db3d39daf4c6"
+      ],
+      "@mantine/core": [
+        "9d55ada3c4ead736882f5db0d7ffd69875be150103aad5b4665984cb4223c57e9c9fef9dacb3308b3cdfb3fd35cb55585d368a085d95df2f9160249c5b2937a1"
+      ],
+      "@mantine/dates": [
+        "f1d4683fde3897b050b10c2380c2e99a8333ef86b62c72cafb33a5cbad81eca3ff136408cb2878bc7b74a2c5fca86b4ea5d4ab324b0698ff58f66e81cf4335a8"
+      ],
+      "@mantine/decorations": [
+        "1691242053ced386389c9d33336731e6e488772636a16bb054c73faa9162f07a946a6f2125c71e8e590eb9158c7ac2ee6078382af18bac759ac38950fbb8187e"
+      ],
+      "@mantine/form": [
+        "e9b1d0d0c4a749e540dbd7acf5c73136c479b2e98287fe8c832b5ed42d64b3eb94857698637aee486398fe24003f7c536ae2e8669ac9114df14edf30f97951cd"
+      ],
+      "@mantine/hooks": [
+        "e5c793887646272acef6369f5c024c7c891194cadb29b95a0015fa52b117afa3dbf0e264fc017b39c85a730894eb427b63570770c82b88f46f61340ebbff6492"
+      ],
+      "@mantine/modals": [
+        "d95ac17223b4aa0de7025154e6a517a34aecc918031d9c1e67a63a03f4c167586e9a3bf69b684c3c783936aae76169121a4b6d79d49870e15a3850f78aca4373"
+      ],
+      "@mantine/next": [
+        "2c22cd015f9989d5db7c92787ccc0c6f0fcdd66aade3ced231cd95b40c05902665e2d0c6785b83d06147973b47165b841333f74f79d1e8eecf6aab0ba3975f2d"
+      ],
+      "@mantine/notifications": [
+        "1aedcc2e2ac08381169c904b31bdf39957b57d0e2d660523da69c64b9e7a54d88dfd411fe04df331b1eefd2d097f6f83fa216cd37aca0ba1e766637a71131385"
+      ],
+      "@mantine/nprogress": [
+        "421a9cbebf1afcce7be1d159d28e38a271d99c4fdda27c7a67b961178cc27706da1c5bf372e17a4299b1577d5afa281477266dc211976e78078ea40e158d50c5"
+      ],
+      "@mantine/prism": [
+        "c11611ef19abafb1064ca7d8c7dfb772dc4bc00c5e194de73c2b61adf517728cd4487344a181f06fa476281bde9227d1f69dda92a121c5c4ecca64f412c4104b"
+      ],
+      "@moonrepo/cli": [
+        "1d7ba4d818f16a8adf01f4c64534138ec3eeb773a8009bfd2cb3e2bba06b623d062f064da06a74dfa3ed64356502b71f34d1a58a508eb7de7bb3a1483b98148f"
+      ],
+      "@next/bundle-analyzer": [
+        "a618b614fa4d74383441a1f3f43130a28f15b18fceeb6fdb975882e76aa29a4bfe76bc88b750257f517804641d2c08c1cf4331de259340cefa2c775f8cad6367"
+      ],
+      "@next/eslint-plugin-next": [
+        "d5dfc33483375ce657cfddf7fd1be2fb897a869d3fa8f4d6e13ba5fcb6d035edcc7130e2a93074e83850c94a2db2139e23143fd2941b201b492b96acf2b93496"
+      ],
+      "@sapphire/time-utilities": [
+        "a9c6bcd2e791175b479fa3d8c4bf933503589c75464fa1799e9dde5796e012f27e6e529f3c2970e1ddace8921801ad968ea9225024cee2e08ab28ffeb13d3b4d"
+      ],
+      "@storybook/react": [
+        "c4dee468df4a1be86097ad55b88f294407854224d70f8ecea78614217d4e76c24a94567dca7e501441eee170f2869e9f10ade448ffeeabf176e375be4653d77d"
+      ],
+      "@tabler/icons": [
+        "01be5ba4a55acfa75bfea6d67256294b4dcb6fa2edddebe3e9ea1f292504f8aa2dd0c5231024ac14858754101b9426153cfe03010e1374019459b795ce1c460b"
+      ],
+      "@tabler/icons-react": [
+        "2b00dc4745dcc738bb85b3ed8d0934b4d05ca04f5a1746475c47f4ca7b36a02c275b824e3ffbb48a0e074925494f450f8c50b11d4f4dcda8e9ea574a56c7045d"
+      ],
+      "@testing-library/dom": [
+        "8202f86b2c47c02b9b9ff3a3d212b6c0d7ccad00820ee7cbc9620805ca4ff8529be12686d2390818c058c26ae10c03699d550dae61d05ebf89e456cb8c7f56eb"
+      ],
+      "@testing-library/react": [
+        "2030d32070b3d43bc374843e9989192be2bdc44d7280aebe17c9223637134b4f769c7077f704d5771cd29174b3f28b91dfae09a95a5d2b5d5db2a5ee689ef67f"
+      ],
+      "@testing-library/user-event": [
+        "f3c3b67c73bf066480434c4cdd865ff01b87577d344babfba7e59528dd8531f8611bb6d262d7be475bea0c964c7f4e625311ef97d3a30d85184227a3b5e3fe55"
+      ],
+      "@types/base-64": [
+        "9cafb7c6f188a82402bea09075aab97ae00211d0b3c94cddc69c9fc1cfa059e94903927a155097a3c95317eef340299b657fcf4e4eb91f54805647cd21dc2800"
+      ],
+      "@types/md5": [
+        "83f53618bbef923b55c230fcc7c31f867f6ca1cb18713df631d1e64a0a8fb17628d5ebd1ea61d4fcf40a786a644bc5b28025092f382a63964d9040f410c156d1"
+      ],
+      "@types/node": [
+        "a42d78780d9c26d50c926a358831f439561008e14a89e306fbdc2e15ff58fed8ac744c1d12b52cf32309fce6ee774da8eb46bce23175ced3ec1d83e2bb21802b",
+        "ae1b46e030a7b62b2f0497d453173f21bb4f6a13ca862e8510d646b623c3cfa3e4dc392e22d5e4bb0af5c9a6263c94851e0b0d880317ef5df959b9425be6f577",
+        "e17214485ba68c8e34661fedd43ee65ad3b4065dc559a902e84994470842f67d70ec492828fd0a4bf89f7c29222b2ca47b7fe1e01493c3c44d336716834f0706"
+      ],
+      "@types/nprogress": [
+        "3ebd9a2df17b3cc06fefb86fb145545580e500753ce004410b9009db6fe1c700f0305f16f09a5c7940f78e27f1a62964d3b34ce6d3a59ff649d319a00ff1ac84"
+      ],
+      "@types/react": [
+        "3880fd1a396920aedd195b7aefc9ee215e320f927697b072c8cf0e95a29c88736a4afcd2789630cffc15b5dbcf0cbf901f3bbf508fc6b7d188df32c076a95d1a",
+        "7b71e98c9ca9e5a7db8573ba96bf018e42f87591832cee85e3606334aa6203af8df1e562d349dc6fd5984621d6dfe8d1b2a2521c933803cc12755d31373c8e5a"
+      ],
+      "@typescript-eslint/eslint-plugin": [
+        "fb558279a54fea3ec4fb0742dd2771ba7edf89850261a233d983ba0454ba481d94737ad9586deac3ed064dccca16e4518564ef90a57deff119080f250081cf60"
+      ],
+      "@typescript-eslint/parser": [
+        "93f498f7c14dd749f7d4336664351a6555b8f2518e55e4ec343b81af04c3e776ac1bbb6757830b0cd526644661ca3cca38172131d75a7aeb10008755f52e7b5c"
+      ],
+      "axios": [
+        "0019a70a644a1d0160e096042499ef13fda20a1693cc188814100026372585082f7dd95a2e54988a6749a9935323a043f2c84898af07e1a91430074f5987d481",
+        "4cd898afe90caaf05307fc5a0da4c61012493b6bfd4937fff9774455c01d368db583b17c4737e73853f149b32e615487930b491661682a1f69a1973b1f533bb7"
+      ],
+      "babel-loader": [
+        "6c0554dbfc9a630bcbb785faebe9ca4c28e4c7de5ced633cc80bd6004f8e9f71096325263e27a1aabf39db532972eda98139e6abb1634c7ef347b8e51560b05f"
+      ],
+      "base-64": [
+        "1ec98a39d085975d6e227e23cfd48a87bf21f547aa60ee506047789f22c6678ecea008f05b60c2960c1a9b618c6d1c114029f6cb02c6c863ea362cdd7052e960"
+      ],
+      "brawl-api": [
+        "18ed2099c06787d70dd8f7ba75fda8f43e711df8fa1580d0def4c3e35943a6076d5be0312606265ecb5f9e4d1688b2ba99618faed04f10a67993a2447ab0c75c"
+      ],
+      "cookies-next": [
+        "2e23497976f728657292e46e00cbd67bd962dcf7b6de2dbc8fa62e9d037f17737956fc9c7bd9b66165162107ebce0d90b748785f4967ae7b09992b74ac26a974"
+      ],
+      "dayjs": [
+        "e4befd8f695eeb2fbe2f887c0f6e2a8a498dfba89eb4b4d87c036167e4ae36871dda584a24c15db9b68fcf19688199f934c38095c629abcc30f8adb60f0723ce"
+      ],
+      "embla-carousel-react": [
+        "c5d2c8519d7cf5bad75883fb188fc3ad3356a81c44bd738e8413c54b2420c09d5a1831ab3ab6b4b199872cbfd8c11a112cd8c4fd7429891ccffa00639763fd47"
+      ],
+      "eslint": [
+        "bd17385067c8d43fa757370f5e3356de6f14639cf7d64d545a0ffbdabd678d87c5b8bc7e00b949ab36e466460a788a7ed98a4f13a3c795f720ae0f417903a749"
+      ],
+      "eslint-config-airbnb": [
+        "2b20bc1827bbc56dc66d5f604f3ecb4609223bf81ab6f1e1211cb458d43aaf19e731cdb05bb0bc5b99d51e129139fabdb26220df3fd24f41e9e015b907689184"
+      ],
+      "eslint-config-airbnb-typescript": [
+        "a408937b6950c58dcce715178a7c4979a5abec6dc0e938be796f4907b6817c03cfdd05a2058da1274b84fe86de919f3c8ec2ef696d036707c7c681a284a5fc6b"
+      ],
+      "eslint-config-mantine": [
+        "05704248d4ea04de0b737ed08e320769947ada78d474addf988aea4dcb69ac6b98aa5ef4e47ad98ee095efad977a1aad9b5c66f76f0dec595dbe5c6fceb9172f"
+      ],
+      "eslint-config-prettier": [
+        "942d0b9d162729967a1816a23107066ae176e5f3f3ebaa3be9fd05cc3dbc1d10e389f127a298fbd564f9cc3e419c9635623a974de9327042289d96469dd91528"
+      ],
+      "eslint-plugin-import": [
+        "8b195fc93660f0b6ac5542612e6b73090f9303b0a134dbc662d5d2c158233331ee79d491e650f560916289a35bd03694ffbac6afc8738c62c218668f3fa3158d"
+      ],
+      "eslint-plugin-jsx-a11y": [
+        "8aebd3313a3a4eddf27da14a5fa1e5b959a5132cc2b0d70332f8576992815d67fc1e28c618a0039d527936a3f60b06fd3ad7559e38a5c387325bca10eb0d1fa5"
+      ],
+      "eslint-plugin-prettier": [
+        "add67757bf011d6c2f1e7c659975117b43aa9f81ebc799d69205fb2c43ed45ec0d36bdbdcfd3f0242ba1ac7030a73b381468adb82dda5aee0d986d450226442c"
+      ],
+      "eslint-plugin-react": [
+        "c609be006eeb23f6cc28cbc43a97cc8724fd2ac1c33425bb8d5f93c3bd59ae1c136a9261afa0716ca9a81ffabcfb66ca5952bc84b934cb4f50d00c362fcf69b7"
+      ],
+      "eslint-plugin-react-hooks": [
+        "7a7df60fd4f2d39bc4b7baaeb0868382454e38d7fe631a0f71c8e6241ca57a1ec258cfef4b05d3cda72c20e5e8d33afebe4dafa9a8a112f05cd5c006091fb083"
+      ],
+      "eslint-plugin-storybook": [
+        "eedabd54e9f30411ae89c8b45669cf8135b8f963ee46b54ae84432e7ce3cb91c1245c7ed590c49c4ffcbd1ad42b7419280d539f58c307dded81e9f9a19d8af59"
+      ],
+      "eslint-plugin-testing-library": [
+        "5a8a3bc79f469017722cc54a87449613060819596f260bcc4982710b1c9afa77ec69c22063d65f8f04d54479655910de451c315b5cbb9eb11166f1a3f9675b05"
+      ],
+      "jsdom": [
+        "b02c74e982b075faa187e3e0e02582c1a3d9d001b010ae5df602a6d31fa952b75141f0e893085955d692b2fe72de1063a08d582db7e193baa8df198e58b7f5a3"
+      ],
+      "md5": [
+        "9c439bada6744e9f1dd3f3fe4bf996b4382b49acb193f2014c30887213ba9e68a8370bcd077a211ee843310fb9cc5ba5463c0c3a53408c4760ba10e894f19276"
+      ],
+      "next": [
+        "73fc1ffd14c956823527a77e4318ae66cbf3ba22a12334a1c35ab9f2bb9167129439c49940818069f1588cc4a9016a5a3a92f0083755ad458a0de073b316015a"
+      ],
+      "node-brawlstars": [
+        "18e82a1e923246d9a3c7d4afded05a33f79d7d790d5cc56b43832c49e8e4b9e3bbecaa759d48d1f69c5559a72a09b90bd925f2d60e2207c493046580de6c0c83"
+      ],
+      "nprogress": [
+        "8b0fdb19bf9254efeb084b89a5aa53855036c83ac434b8e96eef8b39c536a70a71900f7cb85a30305eebde9621184cd138c40ca26ef5774a1b027ac4f62c9f61"
+      ],
+      "ntc-ts": [
+        "3cbdeebc5316341ef4707e706cbec2256f31feb7bbb277297827db0634161a5e30347cadb9453da89439360bf5b59a46389d21d432b2ce19fc91fed7345dacd2"
+      ],
+      "prettier": [
+        "38b0a43ea17e83f54b904f8808f7d0fd1d9705ef9627bb40017ee276cbd6f5e7d15bcf816c4467b64cfe14ef109369a981ce61fad9c6022749d041f74a672188",
+        "e19269e7fdae5bf115e25b85cdcf11513823243aab1e9119643cbcf161afb48ee9fc52ebbf5bde1468766e39b4c4d78e0b068644cfb2604f17f704cfe3776ac6"
+      ],
+      "react": [
+        "8434e5782c52b3bf18a80b666348977924ee3827895fa03ec3ffb9faca90c460049f14130428dd1546bab6cf3b2c277f2c243d3c2a856501331d2e69c24b2bb9"
+      ],
+      "react-dom": [
+        "7c5b915fb793d63563cec1f721e059e6ff0e2855ac116ab5cb7450b6c59398f5e25f95c960ce5cb93504cc58ab724a75a78e99282354e702a0e667d0d787d028"
+      ],
+      "react-icons": [
+        "18ff21e05b3ee10c34dccb930f60956c6124461cc5ef317e81a82bb88b61458f7b5e0afa47e79f24f793785fd3ae6b4775c2e1275cbf20be99fc7578e0b98628"
+      ],
+      "storybook-addon-turbo-build": [
+        "64964c735935e4b638d2da5f0c54dab274b06e2bc3617aafe6df0a7145be920d4d5c58ed874c7a17ca250676ab5575e955d5beba211bc982fdd1b378aa8ddc39"
+      ],
+      "storybook-dark-mode": [
+        "eb3a873c40e49dfc5dbc9dfef86bbef98c76a883aa4f18cb3e4461d1586cd8c5781d0f24e3156bde0d64df15b87031b90c2f7e118fbd8b0dc760f75888b42171"
+      ],
+      "string-similarity": [
+        "d786adb78c2ddd65e0ce7827ece03d4c7ae0baeccd71bb0eaffb8404532da201882ec8bcd7b2fafb6b71027c142dafa09889b6425e322026965398d98206e430"
+      ],
+      "swr": [
+        "79211e3969136741dd5f1d2ca0a880b47a2e2b507dbace5db94f530e942a94b6df1bdfb888df649097ebb52ebbaa3fba4b4066fa9592f577be31c70f213d5f01"
+      ],
+      "typescript": [
+        "008c336ed785130b6e13254adbfc4084f5dbbe62851df9bac3eaf62fc29e0a396839c00ce47e0d92db44fa9a08b9f7ba4d31304f2b10cf7d42a0817728e822a1",
+        "f6e45be090c6971bf57d07481cb7bd896303ffaee35b5a52a3418908d3cd252b20f5d25b5b1ebaf5c52754f9802421542b4aa70093744cb6d6b306936b5053bb"
+      ],
+      "wtf-plugin-api": [
+        "e770f008cfba0a667f323d20f0e2c9ae30ecb26621449a01b2130ad812b3b778735a442b4831809548ebbf4ff72599a143ec652fee2f850fe6fd041865d750e7"
+      ],
+      "wtf_wikipedia": [
+        "336b798bc2e9b68ab834fb8d48c7159e49cfe59e051632795917c511dc9d9327d29af1cee40e4a04fd2e23ff1ccf466b7fc174f6d604eb9f20a333a8d06451d6"
+      ],
+      "zustand": [
+        "b7a009be3f5b2a1abad87098171089ea4d229cfe879bf6503db5268ce5f2be7518f87b8d8fd84026a7a1192bcffd5b4e2653e858d9e10feede00a09132513b8d"
+      ]
+    }
+  },
+  {
+    "compilerOptions": {
+      "jsx": "Preserve",
+      "module": "EsNext",
+      "moduleResolution": "Node",
+      "target": "Es5"
+    }
+  }
+]
