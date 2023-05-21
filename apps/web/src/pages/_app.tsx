@@ -1,21 +1,37 @@
-import { useState } from "react";
-import NextApp, { AppProps, AppContext } from "next/app";
-import { getCookie, setCookie } from "cookies-next";
-import Head from "next/head";
-import { MantineProvider, ColorScheme, ColorSchemeProvider } from "@mantine/core";
-import { Notifications } from "@mantine/notifications";
-import { Header } from "../components/Layout/Header";
-import { RouterProgress } from "../components/Layout/RouterProgress/RouterProgress";
 import "../styles/global.css";
 
-// define Component as a Next.js component with a layout prop
-type AppPropsWithLayout = AppProps & {
-    Component: { layout?: React.ComponentType<{ children: React.ReactNode }> };
+import { ColorScheme, ColorSchemeProvider, MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+import { testFunction } from "@star-track/database";
+import { getCookie, setCookie } from "cookies-next";
+import { NextPage } from "next";
+import NextApp, { AppContext, AppProps } from "next/app";
+import Head from "next/head";
+import { useState } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+import { Header } from "../components/Layout/Header";
+import { RouterProgress } from "../components/Layout/RouterProgress/RouterProgress";
+
+export type NextPageWithLayout<P = unknown, IP = P> = NextPage<P, IP> & {
+    getLayout?: GetLayoutFunction;
 };
+
+export type GetLayoutFunction = (
+    page: React.ReactElement,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    pageProps: Record<string, any>
+) => React.ReactNode;
+
+type AppPropsWithLayout = AppProps & {
+    Component: NextPageWithLayout;
+};
+
+const queryClient = new QueryClient();
 
 export default function App(props: AppPropsWithLayout & { colorScheme: ColorScheme }) {
     const { Component, pageProps } = props;
-    const Layout = Component.layout || ((children) => <>{children}</>);
+    const getLayout = Component.getLayout ?? ((page) => page);
 
     const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
 
@@ -35,27 +51,30 @@ export default function App(props: AppPropsWithLayout & { colorScheme: ColorSche
                 />
                 <link rel="shortcut icon" href="/favicon.svg" />
             </Head>
-
-            <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-                <MantineProvider
-                    theme={{
-                        colorScheme,
-                        primaryColor: "yellow",
-                        colors: {
-                            lighterWhite: ["#fbfbfb"],
-                        },
-                    }}
-                    withGlobalStyles
-                    withNormalizeCSS
+            <QueryClientProvider client={queryClient}>
+                <ColorSchemeProvider
+                    colorScheme={colorScheme}
+                    toggleColorScheme={toggleColorScheme}
                 >
-                    <Notifications />
-                    <RouterProgress />
-                    <Header />
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
-                </MantineProvider>
-            </ColorSchemeProvider>
+                    <MantineProvider
+                        theme={{
+                            colorScheme,
+                            colors: {
+                                lighterWhite: ["#fbfbfb"],
+                            },
+                            primaryColor: "blue",
+                        }}
+                        withGlobalStyles
+                        withNormalizeCSS
+                    >
+                        <Notifications />
+                        <RouterProgress />
+                        <Header />
+
+                        {getLayout(<Component {...pageProps} />, pageProps)}
+                    </MantineProvider>
+                </ColorSchemeProvider>
+            </QueryClientProvider>
         </>
     );
 }
@@ -67,3 +86,9 @@ App.getInitialProps = async (appContext: AppContext) => {
         colorScheme: getCookie("mantine-color-scheme", appContext.ctx) || "dark",
     };
 };
+
+export function getStaticProps() {
+    return {
+        props: {},
+    };
+}
