@@ -1,19 +1,20 @@
 import {
     Container,
+    createStyles,
     Group,
     Header as MantineHeader,
     Paper,
+    rem,
     Text,
     Transition,
-    createStyles,
-    rem,
     useMantineTheme,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { CssUnit, extractUnitValue } from "../../../lib/util/extract-unit-value";
+
+import { CssUnit, extractUnitValue } from "../../../lib/util/units";
 import { BrawlStarsLogo } from "../../Icons/BrawlStarsLogo";
 import { ColorSchemeToggle } from "../ColorSchemeToggle";
 import { HeaderMobile } from "./HeaderMobile";
@@ -26,37 +27,32 @@ interface NavLink {
 
 const HEADER_HEIGHT = rem(60);
 const LINKS: NavLink[] = [
-    { link: "/", label: "Home" },
+    { label: "Home", link: "/" },
     {
-        link: "/brawlers",
         label: "Brawlers",
+        link: "/brawlers",
     },
     {
-        link: "/events",
         label: "Events",
+        link: "/events",
     },
     {
-        link: "/maps",
         label: "Maps",
+        link: "/maps",
     },
 ];
 
 const useStyles = createStyles((theme) => ({
-    root: {
-        position: "relative",
-        zIndex: 1,
-    },
-
     dropdown: {
-        position: "absolute",
-        top: HEADER_HEIGHT,
-        left: 0,
-        right: 0,
-        zIndex: 0,
-        borderTopRightRadius: 0,
         borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
         borderTopWidth: 0,
+        left: 0,
         overflow: "hidden",
+        position: "absolute",
+        right: 0,
+        top: HEADER_HEIGHT,
+        zIndex: 0,
 
         [theme.fn.largerThan("sm")]: {
             display: "none",
@@ -64,32 +60,32 @@ const useStyles = createStyles((theme) => ({
     },
 
     header: {
-        display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
+        display: "flex",
         height: "100%",
+        justifyContent: "space-between",
     },
 
-    links: {
-        [theme.fn.smallerThan("sm")]: {
-            display: "none",
-        },
+    leftOrRight: {
+        flexBasis: 0,
+        flexGrow: 1,
     },
 
     link: {
-        display: "block",
-        lineHeight: 1,
-        padding: `${rem(8)} ${rem(12)}`,
         borderRadius: theme.radius.sm,
-        textDecoration: "none",
         color: theme.colorScheme === "dark" ? theme.colors.dark[0] : theme.colors.gray[7],
-        fontSize: theme.fontSizes.sm,
-        fontWeight: 500,
-
+        // eslint-disable-next-line sort-keys-fix/sort-keys-fix
         "&:hover": {
             backgroundColor:
                 theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[0],
         },
+        display: "block",
+        fontSize: theme.fontSizes.sm,
+        fontWeight: 500,
+        lineHeight: 1,
+        padding: `${rem(8)} ${rem(12)}`,
+
+        textDecoration: "none",
 
         [theme.fn.smallerThan("sm")]: {
             borderRadius: 0,
@@ -99,15 +95,21 @@ const useStyles = createStyles((theme) => ({
 
     linkActive: {
         "&, &:hover": {
-            backgroundColor: theme.fn.variant({ variant: "light", color: theme.primaryColor })
+            backgroundColor: theme.fn.variant({ color: theme.primaryColor, variant: "light" })
                 .background,
-            color: theme.fn.variant({ variant: "light", color: theme.primaryColor }).color,
+            color: theme.fn.variant({ color: theme.primaryColor, variant: "light" }).color,
         },
     },
 
-    leftOrRight: {
-        flexGrow: 1,
-        flexBasis: 0,
+    links: {
+        [theme.fn.smallerThan("sm")]: {
+            display: "none",
+        },
+    },
+
+    root: {
+        position: "relative",
+        zIndex: 1,
     },
 }));
 

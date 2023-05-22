@@ -1,0 +1,11 @@
+{
+    "name": "@brawltracker/brawlapi",
+    "packageManager": "yarn@4.0.0-rc.43",
+    "private": true,
+    "dependencies": {
+        "undici": "^5.22.1"
+    },
+    "main": "./dist/index.js",
+    "source": "./src/index.ts",
+    "types": "./dist/index.d.ts"
+}

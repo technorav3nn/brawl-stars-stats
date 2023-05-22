@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function useServerLoading() {
     const [isLoading, setIsLoading] = useState(true);
@@ -7,6 +7,7 @@ export function useServerLoading() {
 
     useEffect(() => {
         router.isReady && setIsLoading(false);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return isLoading;

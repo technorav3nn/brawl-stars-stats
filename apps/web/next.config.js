@@ -3,15 +3,15 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
-    reactStrictMode: false,
     eslint: {
         ignoreDuringBuilds: true,
     },
-
     experimental: {
         scrollRestoration: true,
     },
+
     images: {
         domains: ["cdn-old.brawlify.com"],
     },
+    reactStrictMode: false,
 });

@@ -1,4 +1,4 @@
-import { Group, Text, createStyles } from "@mantine/core";
+import { createStyles,Group, Text } from "@mantine/core";
 import { IconSparkles, IconSwords } from "@tabler/icons-react";
 import { Brawler } from "brawl-api";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export function BrawlerTitleSection({ brawler }: { brawler: Brawler }) {
     /**
      * {IMAGE HERE} {BRAWLER NAME HERE}
      *              {BRAWLER RARITY HERE}
-     *             {BRAWLER TYPE HERE}
+     *              {BRAWLER TYPE HERE}
      */
 
     const { classes } = useStyles();
@@ -33,22 +33,18 @@ export function BrawlerTitleSection({ brawler }: { brawler: Brawler }) {
                 alt={`An image of ${brawler.name}, a ${brawler.rarity} brawler.`}
             />
             <div>
-                <Text fz={30} fw={500} className={classes.name}>
+                <Text fz={30} fw={700} className={classes.name}>
                     {brawler.name}
                 </Text>
 
                 <Group noWrap spacing={5}>
-                    <IconSparkles stroke={1.5} size="1rem" />
-                    <Text fz="lg" c="dimmed">
-                        {brawler.rarity.name}
-                    </Text>
+                    <IconSparkles stroke={2} size="1.1rem" />
+                    <Text fz="lg">{brawler.rarity.name}</Text>
                 </Group>
 
-                <Group noWrap spacing={5} mt={5}>
-                    <IconSwords stroke={1.5} size="1rem" />
-                    <Text fz="lg" c="dimmed">
-                        {brawler.class.name}
-                    </Text>
+                <Group noWrap spacing={5}>
+                    <IconSwords stroke={2} size="1.1rem" />
+                    <Text fz="lg">{brawler.class.name}</Text>
                 </Group>
             </div>
         </Group>

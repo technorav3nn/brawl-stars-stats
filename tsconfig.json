@@ -1,9 +1,15 @@
 {
-	"extends": "./tsconfig.options.json",
-	"files": [],
-	"references": [
-		{
-			"path": "apps/web"
-		}
-	]
+    "extends": "./tsconfig.options.json",
+    "files": [],
+    "references": [
+        {
+            "path": "apps/web"
+        },
+        {
+            "path": "packages/database"
+        },
+        {
+            "path": "packages/brawlapi"
+        }
+    ]
 }

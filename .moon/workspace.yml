@@ -1,18 +1,20 @@
-$schema: 'https://moonrepo.dev/schemas/workspace.json'
+$schema: "https://moonrepo.dev/schemas/workspace.json"
 
-versionConstraint: '>=1.0.0'
+versionConstraint: ">=1.0.0"
 
 projects:
-  web: 'apps/web'
+    web: "apps/web"
+    database: "packages/database"
+    brawlapi: "packages/brawlapi"
 
 vcs:
-  manager: 'git'
-  defaultBranch: 'master'
+    manager: "git"
+    defaultBranch: "master"
 
 runner:
-  archivableTargets:
-    - ':format'
-    - ':lint'
-    - ':test'
-    - ':typecheck'
-  logRunningCommand: true
+    archivableTargets:
+        - ":format"
+        - ":lint"
+        - ":test"
+        - ":typecheck"
+    logRunningCommand: true

@@ -1,9 +1,9 @@
-/* eslint-disable import/no-relative-packages */
-import React from "react";
 import { Burger, Group, Text } from "@mantine/core";
+import React from "react";
+
 import { BrawlStarsLogo } from "../../../Icons/BrawlStarsLogo";
-import { useStyles } from "./HeaderMobile.styles";
 import { ColorSchemeToggle } from "../../ColorSchemeToggle";
+import { useStyles } from "./HeaderMobile.styles";
 
 interface HeaderProps {
     navbarOpened: boolean;

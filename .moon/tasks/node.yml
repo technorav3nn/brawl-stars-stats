@@ -69,18 +69,6 @@ tasks:
             - "@globs(sources)"
             - "@globs(tests)"
 
-    # https://moonrepo.dev/docs/guides/examples/jest
-    test:
-        command:
-            - "jest"
-            - "--passWithNoTests"
-            - "--preset"
-            - "jest-preset-moon"
-        inputs:
-            - "@globs(sources)"
-            - "@globs(tests)"
-            - "jest.config.*"
-
     # https://moonrepo.dev/docs/guides/examples/typescript
     typecheck:
         command:

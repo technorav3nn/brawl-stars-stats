@@ -1,6 +1,6 @@
 import { Tuple, DefaultMantineColor } from "@mantine/core";
 
-declare module NodeJS {
+declare namespace NodeJS {
     export interface ProcessEnv {
         BRAWL_STARS_API_TOKEN: string;
     }

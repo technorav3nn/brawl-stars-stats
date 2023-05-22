@@ -1,0 +1,24 @@
+{
+	"extends": "./tsconfig.options.json",
+	"include": [
+		"apps/**/*",
+		"core",
+		"crates/**/*",
+		"packages/**/*",
+		"**/.eslintrc.js",
+		"**/*.config.js",
+		"prettier.config.js"
+	],
+	"exclude": [
+		"**/.cache/**/*",
+		"**/.next/**/*",
+		"**/build/**/*",
+		"**/cjs/**/*",
+		"**/dist/**/*",
+		"**/dts/**/*",
+		"**/esm/**/*",
+		"**/lib/**/*",
+		"**/mjs/**/*",
+		"**/node_modules/**/*"
+	]
+}

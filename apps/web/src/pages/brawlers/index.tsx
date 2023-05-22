@@ -1,5 +1,3 @@
-import { GetStaticProps } from "next";
-import { Time } from "@sapphire/time-utilities";
 import {
     ActionIcon,
     Container,
@@ -9,13 +7,16 @@ import {
     TextInput,
     Tooltip,
 } from "@mantine/core";
+import { Time } from "@sapphire/time-utilities";
 import { IconFilter, IconSearch } from "@tabler/icons-react";
-import { brawlifyApi } from "../../lib/apis";
-import { resolveBrawlerName } from "../../lib/util/resolve-brawler-name";
-import { BrawlerWithLess } from "../../lib/types";
+import { GetStaticProps } from "next";
+
 import { BrawlerCard } from "../../components/Brawlers/AllBrawlersCard";
 import { AllBrawlersFilter } from "../../components/Brawlers/AllBrawlersFiltering/AllBrawlersFilter";
-import { useFiltersStore } from "../../store/all-brawlers-filter-store";
+import { brawlifyApi } from "../../lib/apis";
+import { BrawlerWithLess } from "../../lib/types";
+import { resolveBrawlerName } from "../../lib/util/brawlers";
+import { useFiltersStore } from "../../store/all-brawlers-filter";
 
 const SIX_HOURS = Time.Hour * 6;
 
@@ -25,13 +26,13 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             brawlers: brawlers.map((brawler) => ({
-                imageUrl: brawler.imageUrl,
-                id: brawler.id,
-                name: brawler.name,
-                resolvedName: resolveBrawlerName(brawler.name),
-                rarity: brawler.rarity,
-                description: brawler.description,
                 class: brawler.class,
+                description: brawler.description,
+                id: brawler.id,
+                imageUrl: brawler.imageUrl,
+                name: brawler.name,
+                rarity: brawler.rarity,
+                resolvedName: resolveBrawlerName(brawler.name),
             })),
         },
         revalidate: SIX_HOURS,
@@ -40,15 +41,15 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function AllBrawlers({ brawlers }: { brawlers: BrawlerWithLess[] }) {
     const filterStore = useFiltersStore((state) => ({
-        selectedRarities: state.selectedRarity,
-        selectedClasses: state.selectedClass,
         searchQuery: state.searchQuery,
+        selectedClasses: state.selectedClass,
+        selectedRarities: state.selectedRarity,
         setSearch: state.setSearchQuery,
     }));
 
     return (
         <Container size="lg">
-            <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]} mb="lg">
+            <SimpleGrid cols={2} breakpoints={[{ cols: 1, maxWidth: "sm" }]} mb="lg">
                 <TextInput
                     label="Search Brawlers"
                     size="md"
@@ -78,14 +79,14 @@ export default function AllBrawlers({ brawlers }: { brawlers: BrawlerWithLess[] 
             <SimpleGrid
                 cols={9}
                 breakpoints={[
-                    { maxWidth: 400, cols: 3 },
-                    { maxWidth: "sm", cols: 4 },
-                    { maxWidth: "md", cols: 6 },
-                    { maxWidth: "lg", cols: 8 },
-                    { maxWidth: "xl", cols: 9 },
-                    { minWidth: "2xl", cols: 10 },
-                    { maxWidth: "lg", cols: 8 },
-                    { maxWidth: "xl", cols: 9 },
+                    { cols: 3, maxWidth: 400 },
+                    { cols: 4, maxWidth: "sm" },
+                    { cols: 6, maxWidth: "md" },
+                    { cols: 8, maxWidth: "lg" },
+                    { cols: 9, maxWidth: "xl" },
+                    { cols: 10, minWidth: "2xl" },
+                    { cols: 8, maxWidth: "lg" },
+                    { cols: 9, maxWidth: "xl" },
                 ]}
                 mb="lg"
             >

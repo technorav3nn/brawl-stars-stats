@@ -4,16 +4,16 @@ const HEADER_HEIGHT = rem(60);
 
 export const useStyles = createStyles((theme) => ({
     header: {
-        top: 0,
-        left: 0,
-        right: 0,
-        height: rem(HEADER_HEIGHT),
-        zIndex: 6,
-        position: "fixed",
         backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
         borderBottom: `${rem(1)} solid ${
             theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[2]
         }`,
+        height: rem(HEADER_HEIGHT),
+        left: 0,
+        position: "fixed",
+        right: 0,
+        top: 0,
+        zIndex: 6,
 
         [theme.fn.largerThan("sm")]: {
             display: "none",
@@ -21,37 +21,37 @@ export const useStyles = createStyles((theme) => ({
     },
 
     inner: {
-        display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        display: "flex",
         height: "100%",
+        justifyContent: "space-between",
         paddingLeft: theme.spacing.md,
         paddingRight: theme.spacing.md,
     },
 
     logo: {
+        alignItems: "center",
+        display: "flex",
         height: rem(HEADER_HEIGHT),
         paddingTop: rem(6),
-        display: "flex",
-        alignItems: "center",
-    },
-
-    mainSection: {
-        display: "flex",
-        alignItems: "center",
     },
 
     logoWrapper: {
-        display: "flex",
         alignItems: "center",
+        display: "flex",
         pointerEvents: "all",
+    },
+
+    mainSection: {
+        alignItems: "center",
+        display: "flex",
     },
 
     version: {
         ...theme.fn.focusStyles(),
         fontWeight: 700,
-        textDecoration: "none",
         marginTop: rem(2),
+        textDecoration: "none",
 
         [theme.fn.smallerThan(860)]: {
             display: "none",

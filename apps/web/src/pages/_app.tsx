@@ -2,7 +2,6 @@ import "../styles/global.css";
 
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
-import { testFunction } from "@star-track/database";
 import { getCookie, setCookie } from "cookies-next";
 import { NextPage } from "next";
 import NextApp, { AppContext, AppProps } from "next/app";

@@ -1,6 +1,7 @@
-import React from "react";
+import { DefaultProps, Group, rem,Text, UnstyledButton } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
-import { UnstyledButton, Text, Group, DefaultProps, rem } from "@mantine/core";
+import React from "react";
+
 import { useStyles } from "./Searchbar.styles";
 
 interface SearchControlProps extends DefaultProps, React.ComponentPropsWithoutRef<"button"> {

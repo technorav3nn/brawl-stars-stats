@@ -1,0 +1,15 @@
+{
+    "name": "@brawltracker/database",
+    "packageManager": "yarn@4.0.0-rc.43",
+    "dependencies": {
+        "@prisma/client": "^4.14.1"
+    },
+    "packemon": {
+        "format": "lib",
+        "platform": "node"
+    },
+    "private": true,
+    "main": "./dist/index.js",
+    "source": "./src/index.ts",
+    "types": "./dist/index.d.ts"
+}

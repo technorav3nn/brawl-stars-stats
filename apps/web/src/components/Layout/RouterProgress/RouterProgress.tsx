@@ -1,7 +1,8 @@
-import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
-import nProgress from "nprogress";
 import "nprogress/nprogress.css";
+
+import { useRouter } from "next/router";
+import nProgress from "nprogress";
+import { useEffect, useRef } from "react";
 
 export function RouterProgress() {
     const router = useRouter();

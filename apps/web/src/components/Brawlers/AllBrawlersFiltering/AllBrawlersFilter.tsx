@@ -1,5 +1,6 @@
-import { Stack, Select, Button } from "@mantine/core";
-import { useFiltersStore } from "../../../store/all-brawlers-filter-store";
+import { Button,Select, Stack } from "@mantine/core";
+
+import { useFiltersStore } from "../../../store/all-brawlers-filter";
 
 export function AllBrawlersFilter() {
     const filterStore = useFiltersStore();
@@ -17,13 +18,13 @@ export function AllBrawlersFilter() {
                 onChange={(value) => filterStore.setSelectedRarity(value!)}
                 value={filterStore.selectedRarity}
                 data={[
-                    { value: "All", label: "All" },
-                    { value: "Rare", label: "Rare" },
-                    { value: "Super Rare", label: "Super Rare" },
-                    { value: "Epic", label: "Epic" },
-                    { value: "Mythic", label: "Mythic" },
-                    { value: "Legendary", label: "Legendary" },
-                    { value: "Chromatic", label: "Chromatic" },
+                    { label: "All", value: "All" },
+                    { label: "Rare", value: "Rare" },
+                    { label: "Super Rare", value: "Super Rare" },
+                    { label: "Epic", value: "Epic" },
+                    { label: "Mythic", value: "Mythic" },
+                    { label: "Legendary", value: "Legendary" },
+                    { label: "Chromatic", value: "Chromatic" },
                 ]}
             />
             <Select
@@ -32,16 +33,16 @@ export function AllBrawlersFilter() {
                 onChange={(value) => filterStore.setSelectedClass(value!)}
                 value={filterStore.selectedClass}
                 data={[
-                    { value: "All", label: "All" },
-                    { value: "Damage Dealer", label: "Damage Dealer" },
+                    { label: "All", value: "All" },
+                    { label: "Damage Dealer", value: "Damage Dealer" },
                     {
-                        value: "Tank",
                         label: "Tank",
+                        value: "Tank",
                     },
-                    { value: "Support", label: "Support" },
-                    { value: "Controller", label: "Controller" },
-                    { value: "Artillery", label: "Artillery" },
-                    { value: "Assassin", label: "Assassin" },
+                    { label: "Support", value: "Support" },
+                    { label: "Controller", value: "Controller" },
+                    { label: "Artillery", value: "Artillery" },
+                    { label: "Assassin", value: "Assassin" },
                 ]}
             />
             <Button onClick={resetFilters}>Reset Filters</Button>
