@@ -1,0 +1,39 @@
+# Just starts the database not the bot
+
+version: "3"
+
+volumes:
+    database:
+        driver: local
+
+services:
+    postgres:
+        image: postgres
+        container_name: postgres-dev-mode
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_HOST_AUTH_METHOD: trust
+        volumes:
+            - database:/var/lib/mysql
+        networks:
+            - app_network
+    volcano:
+        image: deathblows/volcano:latest
+        container_name: volcano
+        depends_on:
+            - postgres
+        volumes:
+            - type: bind
+              source: ${PWD}/apps/bot/application.yml
+              target: /application.yml
+        ports:
+            - 2333:2333
+        tty: true
+
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+networks:
+    app_network:

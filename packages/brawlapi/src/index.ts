@@ -1,5 +1,3 @@
-import type { fetch as nodeFetch } from "undici";
-
 import { API_URL } from "./constants";
 import { getCsvBrawlers } from "./csv-data";
 import type {
@@ -12,7 +10,7 @@ import type {
     BrawlApiMaps,
 } from "./types";
 
-let fetchFn: typeof fetch | typeof nodeFetch;
+let fetchFn: typeof fetch = fetch;
 
 // Brawlers
 async function getBrawlerById(id: number) {
@@ -83,14 +81,10 @@ export const brawlApi = {
     },
 };
 
-export function createBrawlApi(isBrowser: boolean) {
-    if (isBrowser) {
-        fetchFn = fetch;
-    } else {
-        import("undici").then(({ fetch }) => {
-            fetchFn = fetch;
-        });
-    }
+export function createBrawlApi() {
+    fetchFn = fetch;
 
     return brawlApi;
 }
+
+export * from "./types";

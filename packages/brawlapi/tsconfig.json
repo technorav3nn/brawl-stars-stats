@@ -1,14 +1,10 @@
 {
-  "extends": "../../tsconfig.options.json",
-  "compilerOptions": {
-    "outDir": "../../.moon/cache/types/packages/brawlapi"
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    }
-  ]
+    "extends": "../../tsconfig.base.json",
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tsup.config.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "module": "ESNext"
+    },
+
+    "references": []
 }

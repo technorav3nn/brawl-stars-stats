@@ -1,6 +1,7 @@
 Simple API wrapper for [Brawl API](https://brawlapi.com/).
 
 No classes, no bs, just a simple wrapper.
+Requires Node.js 18+ (fetch API)
 
 ## Installation
 ```bash

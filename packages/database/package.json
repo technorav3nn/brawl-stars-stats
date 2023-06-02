@@ -1,15 +1,20 @@
 {
     "name": "@brawltracker/database",
     "packageManager": "yarn@4.0.0-rc.43",
-    "dependencies": {
-        "@prisma/client": "^4.14.1"
-    },
-    "packemon": {
-        "format": "lib",
-        "platform": "node"
-    },
     "private": true,
+    "version": "1.0.0",
     "main": "./dist/index.js",
     "source": "./src/index.ts",
-    "types": "./dist/index.d.ts"
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "clean": "rimraf .turbo node_modules dist",
+        "lint": "eslint \"src/**/*.ts\""
+    },
+    "dependencies": {
+        "@mikro-orm/core": "^5.7.10",
+        "@mikro-orm/postgresql": "^5.7.10"
+    },
+    "devDependencies": {
+        "typescript": "5.0.4"
+    }
 }

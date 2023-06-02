@@ -1,13 +1,17 @@
 import "../styles/global.css";
 
-import { ColorScheme, ColorSchemeProvider, MantineProvider } from "@mantine/core";
+// import { createBrawlApi } from "@brawltracker/brawlapi/dist";
+import type { ColorScheme } from "@mantine/core";
+import { ColorSchemeProvider, MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { getCookie, setCookie } from "cookies-next";
-import { NextPage } from "next";
-import NextApp, { AppContext, AppProps } from "next/app";
+import type { NextPage } from "next";
+import type { AppContext, AppProps } from "next/app";
+import NextApp from "next/app";
 import Head from "next/head";
 import { useState } from "react";
-import { QueryClient, QueryClientProvider } from "react-query";
 
 import { Header } from "../components/Layout/Header";
 import { RouterProgress } from "../components/Layout/RouterProgress/RouterProgress";
@@ -51,6 +55,7 @@ export default function App(props: AppPropsWithLayout & { colorScheme: ColorSche
                 <link rel="shortcut icon" href="/favicon.svg" />
             </Head>
             <QueryClientProvider client={queryClient}>
+                <ReactQueryDevtools initialIsOpen={false} />
                 <ColorSchemeProvider
                     colorScheme={colorScheme}
                     toggleColorScheme={toggleColorScheme}
