@@ -72,6 +72,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@brawltracker/brawlapi@workspace:packages/brawlapi"
   dependencies:
+    "@sapphire/fetch": "npm:^2.4.1"
     tsup: "npm:^6.7.0"
     typescript: "npm:5.0.4"
     vitest: "npm:^0.31.1"
@@ -1178,6 +1179,15 @@ __metadata:
   version: 1.1.0
   resolution: "@sapphire/duration@npm:1.1.0"
   checksum: 4226273346ec3019c1bdff05e8c379ebc6306422c1c2a296b54106680f4658437de574e7fd2b051aeea3178f57034f6166860005008d26b9295fcb7600f8f90c
+  languageName: node
+  linkType: hard
+
+"@sapphire/fetch@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "@sapphire/fetch@npm:2.4.1"
+  dependencies:
+    cross-fetch: "npm:^3.1.5"
+  checksum: 121b6be1e704c2ee2acb956dfa86894d2433d51e14f96f6d63b84ceb737e12bdd2a31a8d53a9a975f627d39b64ca76a25a89a14e0599842f03d0f3038711131a
   languageName: node
   linkType: hard
 
@@ -2481,6 +2491,15 @@ __metadata:
     path-type: "npm:^4.0.0"
     yaml: "npm:^1.10.0"
   checksum: 8add352f0abd55fc5eaef0823937c33992e5ae670831418c8ff98bb301952260467533b09b8e9257dc360baa270610a7a92b288d94eb25d6f577a0d7e507801b
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^3.1.5":
+  version: 3.1.6
+  resolution: "cross-fetch@npm:3.1.6"
+  dependencies:
+    node-fetch: "npm:^2.6.11"
+  checksum: a8989fca821cae97520976d00f85ce7c3ab8af7e00cc06c94fd94c49ada6847f4cdeabca8e0ebd4aa6c7343f70bea7e0c64d5910b846aab218136a450585aa61
   languageName: node
   linkType: hard
 
@@ -4884,7 +4903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.7":
+"node-fetch@npm:^2.6.11, node-fetch@npm:^2.6.7":
   version: 2.6.11
   resolution: "node-fetch@npm:2.6.11"
   dependencies:
