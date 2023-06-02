@@ -9,12 +9,12 @@ import {
 } from "@mantine/core";
 import { Time } from "@sapphire/time-utilities";
 import { IconFilter, IconSearch } from "@tabler/icons-react";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
 
 import { BrawlerCard } from "../../components/Brawlers/AllBrawlersCard";
 import { AllBrawlersFilter } from "../../components/Brawlers/AllBrawlersFiltering/AllBrawlersFilter";
 import { brawlifyApi } from "../../lib/apis";
-import { BrawlerWithLess } from "../../lib/types";
+import type { BrawlerWithLess } from "../../lib/types";
 import { resolveBrawlerName } from "../../lib/util/brawlers";
 import { useFiltersStore } from "../../store/all-brawlers-filter";
 

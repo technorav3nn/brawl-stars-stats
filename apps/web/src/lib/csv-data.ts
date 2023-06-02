@@ -1,13 +1,6 @@
-export type BrawlerRating = 1 | 2 | 3 | 4 | 5;
+import type { CsvBrawler } from "@brawltracker/brawlapi";
 
-export interface CsvBrawler {
-    id: number;
-    Speed: number;
-    Hitpoints: number;
-    OffenseRating: BrawlerRating;
-    DefenseRating: BrawlerRating;
-    UtilityRating: BrawlerRating;
-}
+export type BrawlerRating = 1 | 2 | 3 | 4 | 5;
 
 let characterData: Record<string, CsvBrawler> = {};
 const elapsed = Date.now();

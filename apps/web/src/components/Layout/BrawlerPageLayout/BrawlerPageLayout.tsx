@@ -1,10 +1,11 @@
 import { Anchor, Breadcrumbs, Container, Space, Tabs } from "@mantine/core";
-import { Brawler } from "brawl-api";
+import type { Brawler } from "brawl-api";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 
-import { Tabs as TabsType, useBrawlerTabStore } from "../../../store/brawler-tabs";
+import type { Tabs as TabsType } from "../../../store/brawler-tabs";
+import { useBrawlerTabStore } from "../../../store/brawler-tabs";
 import { BrawlerTitleSection } from "../../Brawlers/Brawler/BrawlerTitleSection";
 import { StyledTabs } from "../../Styled/StyledTabs";
 

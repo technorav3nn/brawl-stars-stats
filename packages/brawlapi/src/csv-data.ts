@@ -1,5 +1,3 @@
-import { fetch } from "undici";
-
 import { CSV_URL } from "./constants";
 import type { CsvBrawler } from "./types";
 

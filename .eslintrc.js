@@ -17,11 +17,13 @@ module.exports = {
                 "@typescript-eslint/no-empty-function": "off",
                 "@typescript-eslint/no-non-null-assertion": "off",
                 "no-console": ["error", { allow: ["warn", "error", "debug", "log"] }],
+                "react-hooks/exhaustive-deps": "warn",
+                "react-hooks/rules-of-hooks": "error",
                 "react/react-in-jsx-scope": "off",
             },
         },
         {
-            files: ["*.config.js", ".eslintrc.js"],
+            files: ["*.config.js", ".eslintrc.js", "*.config.ts"],
             rules: {
                 "@typescript-eslint/no-var-requires": "off",
                 "import/no-commonjs": "off",

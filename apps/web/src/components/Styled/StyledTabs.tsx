@@ -25,7 +25,7 @@ export function StyledTabs(props: TabsProps) {
                     },
 
                     border: `${rem(1)} solid ${
-                        theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[4]
+                        theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[4]
                     }`,
                     "&:not(:first-of-type)": {
                         borderLeft: 0,
@@ -38,15 +38,10 @@ export function StyledTabs(props: TabsProps) {
                         borderColor: theme.colors.blue[7],
                         color: theme.white,
                     },
-
                     cursor: "pointer",
-
                     display: "flex",
-
                     fontFamily: theme.fontFamily,
-
                     fontSize: theme.fontSizes.sm,
-
                     padding: `${theme.spacing.xs} ${theme.spacing.md}`,
                 },
 
