@@ -1,3 +1,5 @@
+import { fetch } from "@sapphire/fetch";
+
 import { API_URL } from "./constants";
 import { getCsvBrawlers } from "./csv-data";
 import type {
@@ -10,51 +12,41 @@ import type {
     BrawlApiMaps,
 } from "./types";
 
-let fetchFn: typeof fetch = fetch;
-
 // Brawlers
-async function getBrawlerById(id: number) {
-    const response = await fetchFn(`${API_URL}/brawlers/${id}`);
-    return (await response.json()) as BrawlApiBrawler;
+function getBrawlerById(id: number) {
+    return fetch<BrawlApiBrawler>(`${API_URL}/brawlers/${id}`);
 }
 
 async function getAllBrawlers() {
-    const response = await fetchFn(`${API_URL}/brawlers`);
-    return (await response.json()) as BrawlApiBrawler[];
+    return fetch<BrawlApiBrawler[]>(`${API_URL}/brawlers`);
 }
 
 // Events
 async function getEvents() {
-    const response = await fetchFn(`${API_URL}/events`);
-    return (await response.json()) as BrawlApiEvents;
+    return fetch<BrawlApiEvents>(`${API_URL}/events`);
 }
 
 // Maps
 async function getMapById(id: number) {
-    const response = await fetchFn(`${API_URL}/maps/${id}`);
-    return (await response.json()) as BrawlApiMap;
+    return fetch<BrawlApiMap>(`${API_URL}/maps/${id}`);
 }
 
 async function getAllMaps() {
-    const response = await fetchFn(`${API_URL}/maps`);
-    return (await response.json()) as BrawlApiMaps[];
+    return fetch<BrawlApiMaps>(`${API_URL}/maps`);
 }
 
 // Game Modes
 async function getGameModeById(id: number) {
-    const response = await fetchFn(`${API_URL}/gamemodes/${id}`);
-    return (await response.json()) as BrawlApiGameMode;
+    return fetch<BrawlApiGameMode>(`${API_URL}/gamemodes/${id}`);
 }
 
 async function getAllGameModes() {
-    const response = await fetchFn(`${API_URL}/gamemodes`);
-    return (await response.json()) as BrawlApiGameModes[];
+    return fetch<BrawlApiGameModes>(`${API_URL}/gamemodes`);
 }
 
 // Icons
 async function getAllIcons() {
-    const response = await fetchFn(`${API_URL}/icons`);
-    return (await response.json()) as BrawlApiIconsResponse[];
+    return fetch<BrawlApiIconsResponse>(`${API_URL}/icons`);
 }
 
 export const brawlApi = {
@@ -80,11 +72,5 @@ export const brawlApi = {
         getMapById,
     },
 };
-
-export function createBrawlApi() {
-    fetchFn = fetch;
-
-    return brawlApi;
-}
 
 export * from "./types";
