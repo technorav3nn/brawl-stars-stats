@@ -1,9 +1,9 @@
-import { Center } from "@mantine/core";
+import { Button, Center } from "@mantine/core";
 
 export default function HomePage() {
     return (
         <>
-            <Center>Hello</Center>
+            <Button>NIGGER</Button>
         </>
     );
 }
