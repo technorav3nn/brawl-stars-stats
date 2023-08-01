@@ -7,6 +7,7 @@ import type {
     BrawlApiEvents,
     BrawlApiGameMode,
     BrawlApiGameModes,
+    BrawlApiGetAllBrawlersResponse,
     BrawlApiIconsResponse,
     BrawlApiMap,
     BrawlApiMaps,
@@ -18,7 +19,7 @@ function getBrawlerById(id: number) {
 }
 
 async function getAllBrawlers() {
-    return fetch<BrawlApiBrawler[]>(`${API_URL}/brawlers`);
+    return fetch<BrawlApiGetAllBrawlersResponse>(`${API_URL}/brawlers`);
 }
 
 // Events

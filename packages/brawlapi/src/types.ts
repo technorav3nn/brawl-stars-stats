@@ -26,6 +26,10 @@ export interface BrawlApiBrawler {
     videos: BrawlApiVideo[];
 }
 
+export interface BrawlApiGetAllBrawlersResponse {
+    list: BrawlApiBrawler[];
+}
+
 export interface BrawlApiClub {
     club: {
         tag: string;
