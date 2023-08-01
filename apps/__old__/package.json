@@ -6,7 +6,6 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "rakkas --use-loader",
-        "build": "rakkas build",
         "start": "node dist/server",
         "format": "prettier --write --ignore-unknown src"
     },

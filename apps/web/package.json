@@ -6,7 +6,7 @@
     "sideEffects": false,
     "scripts": {
         "dev": "rm -rf .next && next dev",
-        "build": "next build",
+        "build": "panda codegen && next build",
         "start": "next start",
         "lint": "next lint",
         "prepare": "panda codegen"

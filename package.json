@@ -36,10 +36,12 @@
         "apps/*"
     ],
     "engines": {
-        "node": "16.13.0"
+        "node": "16.13.0",
+        "yarn": "4.0.0-rc.43"
     },
     "volta": {
-        "node": "16.13.0"
+        "node": "16.13.0",
+        "yarn": "4.0.0-rc.43"
     },
     "dependencies": {
         "node-gyp": "^9.3.1"

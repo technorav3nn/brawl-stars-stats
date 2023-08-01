@@ -5,7 +5,8 @@
     "scripts": {
         "build": "tsup src/index.ts --format esm,cjs --dts",
         "dev": "tsup src/index.ts --format esm,cjs --dts --watch --onSuccess \"node dist/index.js\"",
-        "test": "vitest run"
+        "test": "vitest run",
+        "lint": "eslint . --ext .ts"
     },
     "devDependencies": {
         "tsup": "^6.7.0",
