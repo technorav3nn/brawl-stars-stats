@@ -1,3 +1,6 @@
+/**
+ * @type {import("eslint").Linter.Config}
+ */
 module.exports = {
     env: {
         browser: true,
@@ -8,6 +11,13 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
+    ],
+    ignorePatterns: [
+        "**/dist/**",
+        "**/node_modules/**",
+        "**/build/**",
+        "**/coverage/**",
+        "**/lib/**",
     ],
     overrides: [
         {
