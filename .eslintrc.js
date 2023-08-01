@@ -8,7 +8,6 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "plugin:@next/next/recommended",
     ],
     overrides: [
         {
@@ -19,6 +18,7 @@ module.exports = {
                 "no-console": ["error", { allow: ["warn", "error", "debug", "log"] }],
                 "react-hooks/exhaustive-deps": "warn",
                 "react-hooks/rules-of-hooks": "error",
+                "react/prop-types": "off",
                 "react/react-in-jsx-scope": "off",
             },
         },

@@ -9,7 +9,8 @@
         "**/*.config.js",
         "prettier.config.js",
         "vitest.config.ts",
-        "tsup.config.ts"
+        "tsup.config.ts",
+        ".eslintrc.js"
     ],
     "exclude": [
         "**/.cache/**/*",
@@ -18,7 +19,7 @@
         "**/cjs/**/*",
         "**/dts/**/*",
         "**/esm/**/*",
-        "**/lib/**/*",
+        // "**/lib/**/*",
         "**/mjs/**/*",
         "**/node_modules/**/*"
     ]

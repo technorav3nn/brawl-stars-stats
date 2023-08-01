@@ -34,7 +34,6 @@ yarn-error.log*
 
 .DS_Store
 node_modules
-.turbo
 *.log
 .next
 dist
@@ -44,5 +43,8 @@ dist-ssr
 .cache
 server/dist
 public/dist
-.turbo
+
 .vercel
+
+# panda css
+styled-system

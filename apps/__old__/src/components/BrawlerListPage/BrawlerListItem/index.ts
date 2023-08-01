@@ -1,0 +1,1 @@
+export { BrawlerListCard } from "./BrawlerListCard";

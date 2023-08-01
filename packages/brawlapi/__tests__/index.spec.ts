@@ -1,8 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { createBrawlApi } from "../dist";
-
-const brawlApi = createBrawlApi();
+import { brawlApi } from "../dist";
 
 describe("brawlapi", () => {
     describe("Brawlers", () => {

@@ -1,1 +1,0 @@
-export { BrawlerPageLayout } from "./BrawlerPageLayout";
